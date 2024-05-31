@@ -228,6 +228,15 @@ impl Controller {
         unsafe { ffi::rtlsdr_cancel_async(**self.0); }
     }
 
+    /// Enable or disable the bias tee on GPIO PIN 0.
+    pub fn set_bias_tee(&mut self, state: i32) -> Result<()> {
+        if unsafe { ffi::rtlsdr_set_bias_tee(**self.0, state) } == 0 {
+            Ok(())
+        } else {
+            Err(())
+        }
+    }
+
     /// Reset device's buffer of incoming samples.
     ///
     /// This will clear any samples that have been received by the device but not yet read

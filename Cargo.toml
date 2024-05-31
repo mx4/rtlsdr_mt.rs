@@ -9,6 +9,8 @@ repository = "https://github.com/kchmck/rtlsdr_mt.rs"
 keywords = ["rtl-sdr", "rtlsdr", "librtlsdr", "threading", "multithreading"]
 
 [dependencies]
-
 libc = "0.2.8"
 rtlsdr_sys = "1.1.0"
+
+[patch.crates-io]
+rtlsdr_sys = { git = 'https://github.com/mx4/rtlsdr_sys.rs.git', branch = 'add-bias-tee' }
