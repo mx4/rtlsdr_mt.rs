@@ -10,4 +10,4 @@ keywords = ["rtl-sdr", "rtlsdr", "librtlsdr", "threading", "multithreading"]
 
 [dependencies]
 libc = "0.2.8"
-rtlsdr_sys = { git = 'https://github.com/mx4/rtlsdr_sys.rs.git', branch = 'add-bias-tee' }
+rtlsdr_sys = { git = 'https://github.com/mx4/rtlsdr_sys.rs.git', rev = '64a4539f7a178f8e591345b65fba2da42895dd33' }
